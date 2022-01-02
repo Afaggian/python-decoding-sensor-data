@@ -8,7 +8,7 @@ class HumidityData(HouseInfo):
             recs.append(float(rec) * 100)
         return recs
 
-    def get_data_by_area(self, field, rec_area=0):
+    def get_data_by_area(self, rec_area=0):
         recs = super().get_data_by_area("humidity", rec_area)
         return self._convert_data(recs)
 
